@@ -1,11 +1,11 @@
-package raky.train.web;
+package raky.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import raky.train.entity.Users;
-import raky.train.service.UsersService;
+import raky.entity.Users;
+import raky.service.UsersService;
 
 import java.util.List;
 
@@ -17,11 +17,6 @@ public class UsersController {
 
     @Autowired
     private UsersService usersService;
-
-    @RequestMapping("/index")
-    public  String index(){
-        return "index";
-    }
 
     @RequestMapping(value = "/insert",method = RequestMethod.POST)
     public String insert(@RequestParam(value = "user_name",required = true)String user_name,

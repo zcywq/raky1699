@@ -1,4 +1,4 @@
-package raky.train;
+package raky;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
